@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Express = require('express');
-const AS = require('./../altmetric-scraper/src/index');
+const AS = require('altmetric-scraper');
 
 const app = Express();
 
@@ -25,7 +25,7 @@ app.post('/export', async (req, res) => {
   }
   
   let filename = `${req.body.title}.docx`;
-  
+
   fs.writeFileSync(`tmp/${filename}`, buffer);
 
   res.send({

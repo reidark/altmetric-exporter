@@ -6,6 +6,7 @@
   "author": "Victor Hugo Matias (reidark)",
   "license": "MIT",
   "dependencies": {
+    "altmetric-scraper": "^1.0.0",
     "express": "4.17.1"
   }
 }
