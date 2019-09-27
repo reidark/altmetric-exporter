@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for Altmetric Exporter.",
+  "main": "index.js",
+  "author": "Victor Hugo Matias (reidark)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}

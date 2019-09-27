@@ -1,0 +1,119 @@
+:root,
+html {
+	font-size: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+html,
+body {
+	width: 100%;
+}
+
+body {
+	font-family: $font-family-primary;
+	font-size: 1rem;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.4;
+	text-rendering: optimizelegibility;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+p {
+	+ p {
+		margin-top: 1rem;
+	}
+}
+
+ul {
+	&.row {
+		list-style-type: none;
+	}
+}
+
+a {
+	text-decoration: none;
+
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}
+
+button,
+input[type="submit"] {
+	font-family: $font-family-primary;
+  font-size: 1rem;
+  line-height: 1.4;
+	background: none;
+	cursor: pointer;
+}
+
+a,
+button {
+  &:hover, &:focus {
+    opacity: .85;
+  }
+}
+
+input,
+textarea,
+select {
+	font-family: $font-family-primary;
+	font-size: 1rem;
+}
+
+textarea {
+	resize: vertical;
+}
+
+[tabindex="-1"]:focus {
+	outline: 0 !important;
+}
+
+.header,
+.main,
+.footer {
+	display: block;
+	width: 100%;
+	clear: both;
+}

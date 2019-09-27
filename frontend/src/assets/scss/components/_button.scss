@@ -1,0 +1,14 @@
+.btn {
+  display: inline-block;
+  padding: .5rem 1rem;
+  color: #ffffff;
+  background: $color-gray-800;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  &.btn-success {
+    background: $color-green-400;
+  }
+}

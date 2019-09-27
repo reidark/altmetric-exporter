@@ -1,0 +1,68 @@
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.label-control {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 0 1rem;
+  line-height: 36px;
+  border: 1px solid $color-gray-100;
+  outline: none;
+}
+
+.form-checkbox-control {
+  display: flex;
+
+  li {
+    list-style-type: none;
+
+    input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+
+      &:checked + label {
+        border-color: $color-gray-800;
+        z-index: 1;
+      }
+
+      + label {
+        position: relative;
+        display: block;
+        padding: .5rem 1rem;
+        border: 1px solid $color-gray-100;
+        cursor: pointer;
+      }
+    }
+    
+    + li {
+      margin-left: -1px;
+    }
+  }
+}
+
+.form-submit {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .5rem 1rem;
+  color: #ffffff;
+  background: $color-blue-300;
+
+  &[disabled] {
+    background: $color-gray-100;
+    color: $color-gray-800;
+    pointer-events: none;
+  }
+}
