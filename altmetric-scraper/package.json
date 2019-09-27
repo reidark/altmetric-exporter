@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.0.0",
   "description": "Scrap data from Altmetric.",
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "author": "reidark <victormatiasrei@gmail.com> (https://github.com/reidark)",
   "repository": {
     "type": "git",
