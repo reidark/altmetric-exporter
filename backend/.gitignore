@@ -1,18 +1,17 @@
 # Node Modules
 
-*/node_modules
+node_modules
 
 # Locks
 
-*/yarn.lock
-*/npm-debug.log*
-*/yarn-debug.log*
-*/yarn-error.log*
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Production
 
-*/build
-*/tmp/*
+build
 
 # Misc
 

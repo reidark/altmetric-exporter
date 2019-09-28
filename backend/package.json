@@ -1,12 +1,19 @@
 {
   "name": "backend",
+  "private": false,
   "version": "1.0.0",
   "description": "Backend for Altmetric Exporter.",
   "main": "index.js",
   "author": "Victor Hugo Matias (reidark)",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "altmetric-scraper": "^1.0.0",
     "express": "4.17.1"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }

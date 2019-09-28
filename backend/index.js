@@ -8,7 +8,7 @@ app
   .use(Express.json())
   .use(Express.static('tmp'))
   .use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3001');
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
     next();
@@ -30,8 +30,8 @@ app.post('/export', async (req, res) => {
 
   res.send({
     filename,
-    url: `http://localhost:3000/${filename}`
+    url: `${process.env.API_URL}/${filename}`
   });
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000)

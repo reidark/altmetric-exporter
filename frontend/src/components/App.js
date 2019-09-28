@@ -80,7 +80,7 @@ const App = () => {
 
             { download && <a className="btn btn-success" href={download}>Download: {filename}</a> }
 
-            { error && <span class="alert alert-error">{error}</span> }
+            { error && <span className="alert alert-error">{error}</span> }
           </div>
         </form>
 
