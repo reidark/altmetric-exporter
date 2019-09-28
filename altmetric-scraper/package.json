@@ -1,7 +1,7 @@
 {
   "name": "altmetric-scraper",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Scrap data from Altmetric.",
   "main": "./src/index.js",
   "author": "reidark <victormatiasrei@gmail.com> (https://github.com/reidark)",
@@ -12,6 +12,9 @@
   "bugs": {
     "url": "https://github.com/reidark/altmetric-exporter/issues"
   },
+  "keywords": [
+    "altmetric"
+  ],
   "license": "MIT",
   "dependencies": {
     "cheerio": "1.0.0-rc.3",

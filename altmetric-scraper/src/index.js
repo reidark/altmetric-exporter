@@ -62,8 +62,24 @@ class AltmetricScraper {
    * @return {Buffer} Returns a buffer.
    */
   async export(store = this.store) {
-    const { Document, Paragraph, HeadingLevel, TextRun, Packer } = docx;
+    const { Document, Paragraph, TextRun, Packer } = docx;
     const doc = new Document();
+
+    doc.Styles
+      .createParagraphStyle('headingCustom', 'Heading Style')
+      .basedOn("Normal")
+      .next("Normal")
+      .size(24)
+      .font('Arial')
+      .bold()
+      .color('000000');
+
+    doc.Styles
+      .createParagraphStyle('paragraphCustom', 'Paragraph Style')
+      .basedOn("Normal")
+      .next("Normal")
+      .size(20)
+      .font('Arial');
 
     doc.addSection({
       properties: {},
@@ -71,18 +87,45 @@ class AltmetricScraper {
         .map(item => {
           return [
             new Paragraph({
+              text: item.title.replace(/(\r\n|\n|\r)/gm, ''),
+              style: 'headingCustom'
+            }),
+            new Paragraph({
               children: [
                 new TextRun({
-                  text: item.title.replace(/(\r\n|\n|\r)/gm, ''),
-                  bold: true,
-                  color: '000000'
+                  text: 'Autor: ',
+                  bold: true
+                }),
+                new TextRun({
+                  text: item.author ? item.author.replace(/(\r\n|\n|\r)/gm, '') : 'Não possui.'
                 })
               ],
-              heading: HeadingLevel.HEADING_1
+              style: 'paragraphCustom'
             }),
-            new Paragraph(`Autor: ${item.author ? item.author.replace(/(\r\n|\n|\r)/gm, '') : 'Não possui.'}`),
-            new Paragraph(`Link: ${item.link ? item.link : 'Não possui.'}`),
-            new Paragraph(`Descrição: ${item.description ? item.description.replace(/(\r\n|\n|\r)/gm, '') : 'Não possui.'}`),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: 'Link: ',
+                  bold: true
+                }),
+                new TextRun({
+                  text: item.link ? item.link : 'Não possui.'
+                })
+              ],
+              style: 'paragraphCustom'
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  text: 'Descrição: ',
+                  bold: true
+                }),
+                new TextRun({
+                  text: item.description ? item.description.replace(/(\r\n|\n|\r)/gm, '') : 'Não possui.'
+                })
+              ],
+              style: 'paragraphCustom'
+            }),
             new Paragraph('')
           ]
         }).reduce((prev, next) => prev.concat(next))
