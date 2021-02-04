@@ -72,6 +72,18 @@ const App = () => {
 
                 <label htmlFor="type-blogs">Blogs</label>
               </li>
+              
+              <li>
+                <input type="radio" id="type-twitter" name="type" value="twitter" checked={type === 'twitter'} onChange={e => setType(e.target.value)} />
+
+                <label htmlFor="type-twitter">Twitter</label>
+              </li>
+
+              <li>
+                <input type="radio" id="type-facebook" name="type" value="facebook" checked={type === 'facebook'} onChange={e => setType(e.target.value)} />
+
+                <label htmlFor="type-facebook">Facebook</label>
+              </li>
             </ul>
           </div>
 
@@ -84,7 +96,7 @@ const App = () => {
           </div>
         </form>
 
-        <div>Disclaimer: This tool works fine with Altmetric published in 09/2019. Further updates in his website structure may crash the exporter.</div>
+        <div>Disclaimer: This tool works fine with Altmetric published in 02/2021. Further updates in his website structure may crash the exporter.</div>
       </main>
 
       <footer className="footer">
