@@ -1,9 +1,9 @@
 {
   "name": "altmetric-scraper",
   "private": false,
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Scrap data from Altmetric.",
-  "main": "./src/index.js",
+  "main": "./src/lib/index.js",
   "author": "reidark <victormatiasrei@gmail.com> (https://github.com/reidark)",
   "repository": {
     "type": "git",

@@ -29,10 +29,12 @@ const App = () => {
       setFilename(response.data.filename);
       setDownload(response.data.url);
       setLoading(false);
-    }).catch(() => {
+    }).catch(error => {
+      const message = (error && error.response && error.response.data && error.response.data.error) ? error.response.data.error : 'Error to export';
+
       setLoading(false);
-      setError('Error to export!');
-    })
+      setError(message);
+    });
   };
 
   return (
