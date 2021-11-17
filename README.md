@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/211117759.svg)](https://zenodo.org/badge/latestdoi/211117759)
+
 # altmetric-exporter
 
 Tool to export data from Altmetric. See [online](https://altmetric-exporter-frontend.herokuapp.com/).

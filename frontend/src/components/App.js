@@ -102,6 +102,12 @@ const App = () => {
       </main>
 
       <footer className="footer">
+        <div className="footer-doi">
+          <a href="https://zenodo.org/badge/latestdoi/211117759" target="_blank" rel="noopener noreferrer">
+            <img src="https://zenodo.org/badge/211117759.svg" alt="DOI" />
+          </a>
+        </div>
+
         <div>Help this project on <a href="https://github.com/reidark/altmetric-exporter" target="_blank" rel="noopener noreferrer">Github</a>.</div>
       </footer>
     </Fragment>
