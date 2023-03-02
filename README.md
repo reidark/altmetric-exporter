@@ -2,9 +2,9 @@
 
 # altmetric-exporter
 
-Tool to export data from Altmetric. See [online](https://altmetric-exporter-frontend.herokuapp.com/).
+Tool to export data from Altmetric. See [online](https://altmetric-exporter-frontend.onrender.com/).
 
-Frontend and Backend are hosted in Heroku.
+Frontend and Backend are hosted in Render.
 
 ## Apps
 
@@ -21,3 +21,4 @@ Frontend of this tool.
 ### Backend
 
 Backend to connect scraper module to http requests.
+If you dont want to run the backend locally, you can use the published version.
